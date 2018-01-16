@@ -1,0 +1,25 @@
+{
+    "name": "zeroonebeatz/yii2-image",
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "zeroonebeatz",
+            "email": "zeroonebeatz@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "zeroonebeatz\\image\\": "src/"
+        } 
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "zeroonebeatz\\image\\tests\\": "tests/"
+        } 
+    }
+}
