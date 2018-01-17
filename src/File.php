@@ -3,6 +3,7 @@
 namespace zeroonebeatz\image;
 
 use yii\imagine\Image as Imagine;
+use yii\web\UploadedFile;
 
 class File
 {
