@@ -8,6 +8,7 @@
         }
     ],
     "require": {
+        "yiisoft/yii2-imagine": "~2.1.0"
     },
     "require-dev": {
         "codeception/codeception": "^2.3"
