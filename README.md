@@ -22,7 +22,7 @@
  * @property string $image
  */
 
-class YourModel extends Model
+class YourModel extends \yii\db\ActiveRecord
 {
     public $imageFile;
 
