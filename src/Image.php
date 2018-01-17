@@ -9,7 +9,7 @@ class Image
   private $model;
   private $file;
 
-  public function __construct(\yii\db\ActiveRecord $model)
+  public function __construct(\yii\db\ActiveRecord $model = null)
   {
     $this->model = $model;
     $this->file = new File($model->tableName());
