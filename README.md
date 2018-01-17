@@ -58,7 +58,7 @@ public function actionCreate()
 
     if ($model->load(Yii::$app->request->post())) {
 
-        $image = new Image($model); // create Image model
+        $image = new Image($model); // create Image object
         $image->upload('image', 'imageFile'); // 'image' - is a name of image attribute on table, 'imageFile' - is a uploded file field name
 
         if ($model->save()){
