@@ -46,7 +46,7 @@ class Model extends \yii\db\ActiveRecord
 3. Upload
 ```php
 $model = Model::findOne(1);
-$image = new Image(model);
+$image = new Image($model);
 $image->upload('image', 'imageFile');
 $model->save();
 ```

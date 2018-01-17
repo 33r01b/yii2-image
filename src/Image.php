@@ -32,13 +32,15 @@ class Image
     return $this->model->save();
   }
 
-  public function original($path) //TODO связать с моделью
+  public static function original($path) //TODO связать с моделью
   {
-    return !empty($path) ? $this->file->uploadPath($path) : '';
+    $image = new self();
+    return !empty($path) ? $image->file->uploadPath($path) : '';
   }
 
-  public function thumb($filename, $width = null, $height = null, $crop = true) //TODO разбить на части, передать создание файлов и директорий
+  public static function thumb($filename, $width = null, $height = null, $crop = true) //TODO разбить на части, передать создание файлов и директорий
   {
-    return $this->file->thumb($filename, $width, $height, $crop);
+    $image = new self();
+    return $image->file->thumb($filename, $width, $height, $crop);
   }
 }
