@@ -22,7 +22,7 @@
  * @property string $image
  */
 
-class YourModel extends \yii\db\ActiveRecord
+class Model extends \yii\db\ActiveRecord
 {
     public $imageFile;
 
@@ -33,6 +33,11 @@ class YourModel extends \yii\db\ActiveRecord
             ['imageFile', 'image']
         ];
     }
+
+    public static function tableName()
+    {
+        return 'table_name';
+    }
 }
 ```
 
@@ -40,7 +45,7 @@ class YourModel extends \yii\db\ActiveRecord
 
 3. Upload
 ```php
-$model = YourModel::findOne(1);
+$model = Model::findOne(1);
 $image = new Image(model);
 $image->upload('image', 'imageFile');
 $model->save();
@@ -49,7 +54,7 @@ Example:
 ```php
 public function actionCreate()
 {
-    $model = new YourModel();
+    $model = new Model();
 
     if ($model->load(Yii::$app->request->post())) {
 
@@ -69,7 +74,7 @@ public function actionCreate()
 
 4. Delete
 ```php
-$image = new Image(YourModel::findOne(1));
+$image = new Image(Model::findOne(1));
 $image->delete('image');
 ```
 Example:
