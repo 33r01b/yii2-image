@@ -2,6 +2,8 @@
 
 namespace zeroonebeatz\image;
 
+use yii\web\UploadedFile;
+
 class Image
 {
   private $model;
