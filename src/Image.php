@@ -15,10 +15,10 @@ class Image
     $this->file = new File($model->tableName());
   }
 
-  public function upload($attr, $tmpAttr)
+  public function upload($attr, $fileAttr)
   {
     if (isset($_FILES)){
-      $file = UploadedFile::getInstance($this->model, $tmpAttr);
+      $file = UploadedFile::getInstance($this->model, $fileAttr);
       $newFile = $this->file->upload($file);
       $this->model->$attr = $newFile ?: $this->model->$attr;
     }
