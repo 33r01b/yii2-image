@@ -4,6 +4,7 @@ namespace zeroonebeatz\image;
 
 use yii\imagine\Image as Imagine;
 use yii\web\UploadedFile;
+use yii\helpers\FileHelper;
 
 class File
 {
@@ -34,7 +35,7 @@ class File
   private function generateFileName()
   {
       return strtolower(
-        md5(uniqid($this->image->baseName)) . DIRECTORY_SEPARATOR . $this->image->extension
+        md5(uniqid($this->image->baseName)) . '.' . $this->image->extension
       );
   }
 

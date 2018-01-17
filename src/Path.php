@@ -3,6 +3,7 @@
 namespace zeroonebeatz\image;
 
 use yii\helpers\FileHelper;
+use \Yii;
 
 class Path
 {
