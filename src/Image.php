@@ -9,7 +9,7 @@ class Image
   private $model;
   private $file;
 
-  public function __construct(\yii\db\ActiveRecord $model = null)
+  public function __construct(\yii\db\ActiveRecord $model)
   {
     $this->model = $model;
     $this->file = new File($model->tableName());
@@ -34,13 +34,13 @@ class Image
 
   public static function original($path) //TODO связать с моделью
   {
-    $image = new self();
-    return !empty($path) ? $image->file->uploadPath($path) : '';
+    $file = new File();
+    return !empty($path) ? $file->uploadPath($path) : '';
   }
 
   public static function thumb($filename, $width = null, $height = null, $crop = true) //TODO разбить на части, передать создание файлов и директорий
   {
-    $image = new self();
-    return $image->file->thumb($filename, $width, $height, $crop);
+    $file = new File();
+    return $file->thumb($filename, $width, $height, $crop);
   }
 }

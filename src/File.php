@@ -14,7 +14,7 @@ class File
   private $dir;
   private $image;
 
-  public function __construct($dir)
+  public function __construct($dir = null)
   {
     $this->path = new Path();
     $this->dir = $dir;
